@@ -23,16 +23,16 @@ export default async function Page({
     <main className="container mx-auto grid grid-cols-1 gap-6 p-12">
       {post?.mainImage ? (
         <Image
-          className="w-full aspect-800/300"
+          className="w-full aspect-[800/300]"
           src={urlFor(post.mainImage)
             .width(800)
             .height(300)
             .quality(80)
             .auto("format")
             .url()}
-          alt={post?.mainImage?.alt || ""}
-          width="800"
-          height="300"
+          alt={post.mainImage.alt || "Blog post image"}
+          width={800}
+          height={300}
         />
       ) : null}
       <h1 className="text-4xl font-bold text-balance">{post?.title}</h1>
