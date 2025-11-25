@@ -19,7 +19,7 @@ export function Post(props: NonNullable<POST_QUERYResult>) {
           <Categories categories={categories} />
           <PublishedAt publishedAt={publishedAt} />
         </div>
-        <Title>{title}</Title>
+        <Title>{title || "Untitled Post"}</Title>
         <Author author={author} />
       </header>
       {mainImage ? (
